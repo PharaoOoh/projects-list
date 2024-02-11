@@ -1,0 +1,41 @@
+.background-lightTheme {
+  background-image: url("../assets/images/sebastian-svenson-LpbyDENbQQg-unsplash.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.background-darkTheme {
+  background-image: url("../assets/images/jeff-lim-eXieD9RMZ5E-unsplash.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.solid-bckground-darkTheme {
+  background-color: white;
+  color: black;
+}
+
+.solid-bckground-lightTheme {
+  background-color: rgba(255, 255, 255, 0.7019607843);
+  color: black;
+}
+
+.blur-bckground-darkTheme {
+  background-color: rgba(9, 18, 44, 0.7882352941);
+  color: white;
+}
+
+.blur-bckground-lightTheme {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+.icon-darkTheme {
+  background-color: #ffffff;
+  color: black !important;
+}
+
+.icon-lightTheme {
+  background-color: #dadada;
+  color: black;
+}/*# sourceMappingURL=theme.css.map */

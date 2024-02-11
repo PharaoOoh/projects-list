@@ -1,0 +1,34 @@
+@use "./layouts/mixins" as *;
+@use "./layouts/variables" as *;
+
+.background-lightTheme {
+  @include wallpaper("../assets/images/sebastian-svenson-LpbyDENbQQg-unsplash.jpg");
+}
+
+.background-darkTheme {
+  @include wallpaper("../assets/images/jeff-lim-eXieD9RMZ5E-unsplash.jpg");
+}
+
+.solid-bckground-darkTheme {
+  @include theme($white-color, $black-color);
+}
+
+.solid-bckground-lightTheme {
+  @include theme(#ffffffb3, $black-color);
+}
+
+.blur-bckground-darkTheme {
+  @include theme(#09122cc9, $white-color);
+}
+
+.blur-bckground-lightTheme {
+  @include theme(#ffffffcc, $black-color);
+}
+
+.icon-darkTheme {
+  @include theme(#ffffff, $black-color !important);
+}
+
+.icon-lightTheme {
+  @include theme(#dadada, $black-color);
+}

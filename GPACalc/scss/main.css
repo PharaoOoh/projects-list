@@ -1,0 +1,183 @@
+.disable-select {
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
+body {
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  padding: 0px;
+  margin: 0px;
+}
+body main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body main > section {
+  margin: 0.5em;
+}
+
+.field-inputs,
+.field-settings,
+.field-screen {
+  width: 90%;
+  padding: 0.75em 0.5em;
+  border-style: none;
+  border-radius: 0.4em;
+}
+
+.error {
+  color: red;
+}
+
+.field-inputs > section > h1 {
+  font-size: 2.3em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.field-inputs > .settings-icon > i {
+  float: right;
+  cursor: pointer;
+}
+.field-inputs > .settings-icon > i:hover {
+  cursor: pointer;
+  color: rgba(38, 202, 202, 0.8666666667);
+}
+.field-inputs > .inputs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.field-inputs > .inputs-container > .inputs-items > input {
+  margin: 1em;
+  width: 15em;
+  height: 2.4em;
+  text-align: center;
+  border-style: none;
+  border-radius: 0.4em;
+}
+.field-inputs > .inputs-container > .inputs-items > input:focus-visible {
+  outline: none;
+}
+
+.field-screen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.field-screen > section {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+.field-screen .RadialProgress {
+  --hue: 220;
+  --holesize: 65%;
+  --track-bg: white;
+  --fill-bg: #08bbbb;
+  block-size: 20vmin;
+  inline-size: 20vmin;
+  min-inline-size: 35px;
+  min-block-size: 35px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  font-weight: bold;
+  filter: saturate(2);
+  font-size: max(3vmin, 0.65rem);
+}
+.field-screen .RadialProgress::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  z-index: -1;
+  background: conic-gradient(var(--fill-bg) var(--progress, 0%), hsl(var(--hue), 100%, 100%), hsl(var(--hue), 100%, 70%) var(--progress, 0%), var(--track-bg) var(--progress, 0%) 100%);
+  -webkit-mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
+  mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
+}
+
+.field-settings > section:nth-child(1) {
+  border-radius: 0.2em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.field-settings > section:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.5em 0em;
+}
+.field-settings > section:nth-child(2) > section {
+  display: flex;
+  align-items: center;
+  margin: 0.4em;
+}
+.field-settings > section:nth-child(2) > section > section {
+  width: 2em;
+  font-weight: bold;
+  margin-right: 1em;
+}
+.field-settings > section:nth-child(2) > section > input {
+  border: none;
+  border-radius: 0.15em;
+  padding: 0.25em 0.5em;
+}
+.field-settings > section:nth-child(3) {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.field-settings > section:nth-child(3) > button {
+  margin: 0.4em;
+  padding: 0.4em;
+  width: 6em;
+  border-style: none;
+  border-radius: 0.3em;
+}
+.field-settings > section:nth-child(3) > button:nth-child(1):hover {
+  color: #1bdcdc;
+  box-shadow: 1px 1px 2px #1bdcdc, 0 0 25px #1bdcdc, 0 0 5px #1bdcdc;
+}
+.field-settings > section:nth-child(3) > button:nth-child(2):hover,
+.field-settings > section:nth-child(3) > button:nth-child(3):hover {
+  color: #ea1212;
+  box-shadow: 1px 1px 2px #ea1212, 0 0 25px #ea1212, 0 0 5px #ea1212;
+}
+
+@media screen and (max-width: 767px) {
+  .field-inputs > section {
+    margin-bottom: 0.25em;
+  }
+  .inputs-container,
+  .inputs-container > section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .inputs-container input,
+  .inputs-container > section input {
+    width: 20em;
+  }
+  .field-contents {
+    width: 90%;
+  }
+}/*# sourceMappingURL=main.css.map */

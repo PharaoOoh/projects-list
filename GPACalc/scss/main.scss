@@ -1,0 +1,179 @@
+@use "./layouts/mixins" as *;
+@use "./layouts/variables" as *;
+@include disable-select;
+
+body {
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    > section {
+      margin: 0.5em;
+    }
+  }
+}
+
+//field-inputs, field-settings, & field-screen
+.field-inputs,
+.field-settings,
+.field-screen {
+  width: 90%;
+  padding: 0.75em 0.5em;
+  @include border(none, 0.4em, false);
+}
+
+.error {
+  color: red;
+}
+
+.field-inputs {
+  > section > h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  > .settings-icon {
+    > i {
+      float: right;
+      cursor: pointer;
+    }
+    > i:hover {
+      cursor: pointer;
+      color: $addbtn-hover;
+    }
+  }
+  > .inputs-container {
+    @include flex-center(true);
+    > .inputs-items > input {
+      margin: 1em;
+      width: 15em;
+      height: 2.4em;
+      text-align: center;
+      @include border(none, 0.4em, false);
+    }
+    > .inputs-items > input:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.field-screen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > section {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  .RadialProgress {
+    --hue: 220;
+    --holesize: 65%;
+    --track-bg: white;
+    --fill-bg: #08bbbb;
+
+    block-size: 20vmin;
+    inline-size: 20vmin;
+    min-inline-size: 35px;
+    min-block-size: 35px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: bold;
+    filter: saturate(2);
+    font-size: max(3vmin, 0.65rem);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 50%;
+      z-index: -1;
+      background: conic-gradient(var(--fill-bg) var(--progress, 0%), hsl(var(--hue) 100% 100%), hsl(var(--hue) 100% 70%) var(--progress, 0%), var(--track-bg) var(--progress, 0%) 100%);
+      -webkit-mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
+      mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
+    }
+  }
+}
+
+.field-settings {
+  > section:nth-child(1) {
+    border-radius: 0.2em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  > section:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: .5em 0em;
+    > section {
+      display: flex;
+      align-items: center;
+      margin: 0.4em;
+      > section {
+        width: 2em;
+        font-weight: bold;
+        margin-right: 1em;
+      }
+      > input {
+        border: none;
+        border-radius: 0.15em;
+        padding: 0.25em 0.5em;
+      }
+    }
+  }
+  > section:nth-child(3) {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > button {
+      margin: 0.4em;
+      padding: 0.4em;
+      width: 6em;
+      border-style: none;
+      border-radius: 0.3em;
+    }
+    > button:nth-child(1):hover {
+      color: $settings-btn-ok-hover;
+      box-shadow: 1px 1px 2px $settings-btn-ok-hover, 0 0 25px $settings-btn-ok-hover, 0 0 5px $settings-btn-ok-hover;
+    }
+    > button:nth-child(2):hover,
+    > button:nth-child(3):hover {
+      color: $settings-btn-reset-hover;
+      box-shadow: 1px 1px 2px $settings-btn-reset-hover, 0 0 25px $settings-btn-reset-hover, 0 0 5px $settings-btn-reset-hover;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  //Field inputs & Field Screen
+  .field-inputs > section {
+    margin-bottom: 0.25em;
+  }
+
+  .inputs-container,
+  .inputs-container > section {
+    @include flex-center;
+    flex-direction: column;
+    input {
+      width: 20em;
+    }
+  }
+
+  //Field Contents
+  .field-contents {
+    width: 90%;
+  }
+}
