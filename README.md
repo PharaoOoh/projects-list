@@ -12,3 +12,6 @@ Demo: [Google-Meet-Interface Demo](https://pharaoooh.github.io/projects-list/Goo
 
 ## Chess-Board
 Demo: [Chess-Board Demo](https://pharaoooh.github.io/projects-list/Chess-Board/index.html)
+
+## GPACalc
+Demo: [GPACalc Demo](https://pharaoooh.github.io/projects-list/GPACalc/index.html)
