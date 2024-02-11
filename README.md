@@ -9,3 +9,6 @@ Demo: [instgram-post-interface Demo](https://pharaoooh.github.io/projects-list/i
 
 ## Google-Meet-Interface
 Demo: [Google-Meet-Interface Demo](https://pharaoooh.github.io/projects-list/Google-Meet-Interface/index.html)
+
+## Chess-Board
+Demo: [Chess-Board Demo](https://pharaoooh.github.io/projects-list/Chess-Board/index.html)
