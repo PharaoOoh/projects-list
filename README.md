@@ -17,4 +17,4 @@ Demo: [Chess-Board Demo](https://pharaoooh.github.io/projects-list/Chess-Board/i
 Demo: [GPACalc Demo](https://pharaoooh.github.io/projects-list/GPACalc/index.html)
 
 ## HuPMap
-Demo: [HuPMap Demo](https://pharaoooh.github.io/projects-list/HuPMap/index.html)
+Demo: [HuPMap Demo](https://pharaoooh.github.io/projects-list/HuPMAP/)
