@@ -21,3 +21,7 @@ Demo: [HuPMap Demo](https://pharaoooh.github.io/projects-list/HuPMAP/)
 
 ## signup template 1
 Demo: [template Demo](https://pharaoooh.github.io/projects-list/signup-template-1/)
+
+## ReactJs-Dashboard
+Demo: [template Demo](https://pharaoooh.github.io/projects-list/ReactJs-Dashboard/)
+
